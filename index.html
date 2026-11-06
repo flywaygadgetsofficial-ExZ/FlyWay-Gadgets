@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlyWay Gadgets | সেরা গেজেট, সেরা দামে</title>
+<meta name="description" content="FlyWay Gadgets – ইয়ারবাড, স্মার্টওয়াচ, পাওয়ার ব্যাংক ও আরও অনেক গেজেট। WhatsApp-এ সহজে অর্ডার করুন।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;800&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#E8F3FB; --paper:#FFFFFF; --ink:#0E2A47; --muted:#4F6A85;
+  --blue:#2A6BFF; --sun:#FFC93C; --wa:#1FA855; --line:#CFE0EF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Hind Siliguri",system-ui,sans-serif;background:var(--sky);color:var(--ink);line-height:1.7;font-size:17px}
+h1,h2,h3{font-family:"Baloo Da 2","Hind Siliguri",sans-serif;line-height:1.25}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h2{font-size:clamp(26px,5vw,36px);font-weight:800;margin-bottom:8px}
+.sub{color:var(--muted);max-width:52ch;margin-bottom:32px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(232,243,251,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:"Baloo Da 2",sans-serif;font-weight:800;font-size:22px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font-style:normal;font-size:15px}
+nav{display:flex;gap:20px;font-weight:500;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+@media(max-width:640px){nav{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font:600 17px "Hind Siliguri",sans-serif;text-decoration:none;border:0;cursor:pointer}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#178a45}
+.btn-ghost{background:transparent;border:2px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+
+/* hero */
+.hero{padding:48px 0 72px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(34px,7vw,58px);font-weight:800;margin-bottom:16px}
+.hero p{color:var(--muted);font-size:19px;max-width:44ch;margin-bottom:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.sky{position:relative;aspect-ratio:1/1;max-width:420px;width:100%;justify-self:center}
+.sky svg{position:absolute;inset:0;width:100%;height:100%}
+.chip{position:absolute;display:grid;place-items:center;width:72px;height:72px;border-radius:20px;background:var(--paper);font-size:34px;box-shadow:0 10px 24px rgba(14,42,71,.14);animation:bob 4s ease-in-out infinite}
+.c1{left:2%;bottom:6%}.c2{left:34%;top:34%;animation-delay:.6s;background:var(--sun)}.c3{right:4%;top:2%;animation-delay:1.2s}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.sky{max-width:300px}}
+
+/* menu */
+#menu{background:var(--paper)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.tab{padding:8px 18px;border-radius:999px;border:2px solid var(--line);background:var(--paper);font:500 16px "Hind Siliguri",sans-serif;color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.list{list-style:none;border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:48px 1fr auto auto;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.item .ic{font-size:30px;text-align:center}
+.item b{display:block;font-weight:600}
+.item small{color:var(--muted);font-size:14.5px}
+.price{font-family:"Baloo Da 2",sans-serif;font-weight:800;font-size:21px;white-space:nowrap}
+.order{padding:8px 16px;border-radius:999px;background:var(--wa);color:#fff;text-decoration:none;font-weight:600;font-size:15px;white-space:nowrap}
+.order:hover{background:#178a45}
+.note{margin-top:16px;color:var(--muted);font-size:14.5px}
+@media(max-width:560px){.item{grid-template-columns:40px 1fr auto;row-gap:8px}.item .order{grid-column:2/4;justify-self:start}}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.why div{padding:6px 0 6px 18px;border-left:4px solid var(--sun)}
+.why h3{font-size:20px;margin-bottom:4px}
+.why p{color:var(--muted);font-size:16px}
+
+/* reviews */
+#reviews{background:var(--ink);color:#fff}
+#reviews .sub{color:#B9CCE0}
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+blockquote{background:#16385D;border-radius:18px;padding:22px}
+blockquote p{margin-bottom:14px}
+blockquote footer{font-size:15px;color:#B9CCE0}
+.stars{color:var(--sun);letter-spacing:2px;margin-bottom:8px}
+
+/* order */
+.final{text-align:center}
+.final .sub{margin-inline:auto}
+.final .cta{justify-content:center}
+
+footer.site{padding:28px 0 96px;color:var(--muted);font-size:15px;text-align:center;border-top:1px solid var(--line)}
+
+/* floating */
+.float{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 10px 24px rgba(14,42,71,.25)}
+@media(prefers-reduced-motion:reduce){.chip{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top"><i>✈</i>FlyWay Gadgets</a>
+    <nav>
+      <a href="#menu">গেজেট ও দাম</a>
+      <a href="#why">কেন আমরা</a>
+      <a href="#reviews">মতামত</a>
+      <a href="#order">অর্ডার</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>আপনার পছন্দের গেজেট, উড়ে আসুক আপনার কাছে</h1>
+        <p>ইয়ারবাড, স্মার্টওয়াচ, পাওয়ার ব্যাংক আর দৈনন্দিন কাজের স্মার্ট গেজেট – ভালো মানের পণ্য, ন্যায্য দাম।</p>
+        <div class="cta">
+          <a class="btn btn-wa" href="https://wa.me/8801355152312?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%20FlyWay%20Gadgets%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%97%E0%A7%87%E0%A6%9C%E0%A7%87%E0%A6%9F%20%E0%A6%85%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87" target="_blank" rel="noopener">WhatsApp-এ অর্ডার করুন</a>
+          <a class="btn btn-ghost" href="#menu">গেজেট ও দাম দেখুন</a>
+        </div>
+      </div>
+      <div class="sky" aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none">
+          <path d="M40 350 C 60 160, 260 330, 330 70" stroke="#2A6BFF" stroke-width="4" stroke-dasharray="4 14" stroke-linecap="round"/>
+          <circle cx="330" cy="70" r="9" fill="#2A6BFF"/>
+        </svg>
+        <span class="chip c1">🎧</span>
+        <span class="chip c2">⌚</span>
+        <span class="chip c3">🔋</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="wrap">
+      <h2>গেজেট ও দাম</h2>
+      <p class="sub">পছন্দের গেজেটের পাশের বাটনে ট্যাপ করলেই WhatsApp-এ অর্ডারের মেসেজ তৈরি হয়ে যাবে।</p>
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <ul class="list" id="list"></ul>
+      <p class="note">* দাম ও স্টক পরিবর্তন হতে পারে। নিশ্চিত হতে WhatsApp-এ জানতে নিন।</p>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="wrap">
+      <h2>কেন FlyWay Gadgets থেকে নেবেন?</h2>
+      <p class="sub">কম কথায়: আসল পণ্য, পরিষ্কার দাম, আর কেনার পরেও পাশে থাকা।</p>
+      <div class="why">
+        <div><h3>বিশ্বাসযোগ্য মান</h3><p>প্রতিটি পণ্য পাঠানোর আগে আমরা নিজে চালিয়ে দেখি।</p></div>
+        <div><h3>ন্যায্য দাম</h3><p>লুকানো খরচ নেই। যে দাম বলা হয়, সেই দামই।</p></div>
+        <div><h3>দ্রুত ডেলিভারি</h3><p>অর্ডার কনফার্ম হলেই দ্রুত পাঠিয়ে দেওয়া হয়।</p></div>
+        <div><h3>বিক্রয়-পরবর্তী সাপোর্ট</h3><p>কোনো সমস্যা হলে WhatsApp-এ জানান, আমরা সমাধান করি।</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="wrap">
+      <h2>কাস্টমারদের মতামত</h2>
+      <p class="sub">যাঁরা আমাদের থেকে কিনেছেন, তাঁরা কী বলছেন।</p>
+      <div class="rev">
+        <blockquote>
+          <div class="stars" aria-label="৫ তারা">★★★★★</div>
+          <p>ইয়ারবাডের সাউন্ড কোয়ালিটি আশা করার চেয়ে ভালো। দুই দিনের মধ্যে হাতে পেয়েছি।</p>
+          <footer>— রাকিব হাসান</footer>
+        </blockquote>
+        <blockquote>
+          <div class="stars" aria-label="৫ তারা">★★★★★</div>
+          <p>স্মার্টওয়াচের দাম অন্য জায়গার চেয়ে কম, আর কোনো ঝামেলা ছাড়াই অর্ডার হয়ে গেল।</p>
+          <footer>— নুসরাত জাহান</footer>
+        </blockquote>
+        <blockquote>
+          <div class="stars" aria-label="৫ তারা">★★★★★</div>
+          <p>পাওয়ার ব্যাংকে সমস্যা হয়েছিল, WhatsApp-এ জানাতেই দ্রুত সমাধান করে দিয়েছে।</p>
+          <footer>— তানভীর আহমেদ</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER -->
+  <section id="order" class="final">
+    <div class="wrap">
+      <h2>আজই অর্ডার করুন</h2>
+      <p class="sub">WhatsApp-এ মেসেজ দিন – গেজেটের নাম, আপনার নাম ও ঠিকানা জানালেই আমরা বাকিটা দেখব।</p>
+      <div class="cta">
+        <a class="btn btn-wa" href="https://wa.me/8801355152312" target="_blank" rel="noopener">WhatsApp: 01355152312</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">© <span id="yr">2026</span> FlyWay Gadgets। সর্বস্বত্ব সংরক্ষিত।</div>
+</footer>
+
+<a class="btn btn-wa float" href="https://wa.me/8801355152312" target="_blank" rel="noopener" aria-label="WhatsApp-এ অর্ডার করুন">💬 অর্ডার করুন</a>
+
+<script>
+/* ===== এখানে নিজের গেজেট ও দাম বদলে নিন ===== */
+const NUMBER = "8801355152312";
+const DATA = {
+  "ইয়ারবাড ও হেডফোন": [
+    {i:"🎧", n:"ওয়্যারলেস ইয়ারবাড", d:"ব্লুটুথ ৫.৩, ২০ ঘণ্টা ব্যাকআপ", p:1290},
+    {i:"🎧", n:"নেকব্যান্ড ব্লুটুথ", d:"ঘাম-প্রতিরোধী, জিমের জন্য ভালো", p:790},
+    {i:"🎧", n:"গেমিং হেডফোন", d:"মাইক্রোফোনসহ, RGB লাইট", p:1590}
+  ],
+  "স্মার্টওয়াচ": [
+    {i:"⌚", n:"স্মার্টওয়াচ (কলিং)", d:"ব্লুটুথ কলিং, হার্ট রেট মনিটর", p:2490},
+    {i:"⌚", n:"ফিটনেস ব্যান্ড", d:"স্টেপ কাউন্টার, স্লিপ ট্র্যাকিং", p:990}
+  ],
+  "পাওয়ার ও চার্জার": [
+    {i:"🔋", n:"পাওয়ার ব্যাংক ১০,০০০ mAh", d:"ফাস্ট চার্জিং, ডুয়াল পোর্ট", p:1350},
+    {i:"🔌", n:"ফাস্ট চার্জার ২০W", d:"টাইপ-সি, নিরাপদ চার্জিং", p:650},
+    {i:"🔗", n:"টাইপ-সি ডেটা কেবল", d:"১ মিটার, টেকসই ব্রেইডেড", p:250}
+  ],
+  "অন্যান্য": [
+    {i:"🔊", n:"পোর্টেবল ব্লুটুথ স্পিকার", d:"ছোট সাইজ, জোরালো সাউন্ড", p:1190},
+    {i:"📱", n:"ফোন স্ট্যান্ড ও হোল্ডার", d:"টেবিল ও গাড়ির জন্য", p:290}
+  ]
+};
+/* ============================================ */
+
+const bn = n => String(n).replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d]).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+const tabs = document.getElementById("tabs"), list = document.getElementById("list");
+const cats = Object.keys(DATA);
+
+function show(cat){
+  [...tabs.children].forEach(t => t.setAttribute("aria-selected", t.dataset.c === cat));
+  list.innerHTML = DATA[cat].map(x => {
+    const msg = encodeURIComponent(`আমি FlyWay Gadgets থেকে "${x.n}" (${x.p} টাকা) অর্ডার করতে চাই।`);
+    return `<li class="item">
+      <span class="ic" aria-hidden="true">${x.i}</span>
+      <div><b>${x.n}</b><small>${x.d}</small></div>
+      <span class="price">৳${bn(x.p)}</span>
+      <a class="order" href="https://wa.me/${NUMBER}?text=${msg}" target="_blank" rel="noopener">অর্ডার</a>
+    </li>`;
+  }).join("");
+}
+cats.forEach(c => {
+  const b = document.createElement("button");
+  b.className = "tab"; b.type = "button"; b.dataset.c = c; b.textContent = c;
+  b.setAttribute("role", "tab");
+  b.onclick = () => show(c);
+  tabs.appendChild(b);
+});
+show(cats[0]);
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
